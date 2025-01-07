@@ -2,6 +2,12 @@ package org.csh;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world");
+        
+        int joe = 6;
+        int biden = 9;
+        int baldBiden = (((joe + biden) + (joe * biden)) * joe) + joe;
+        System.out.print(baldBiden);
+        
+        
     }
 }
