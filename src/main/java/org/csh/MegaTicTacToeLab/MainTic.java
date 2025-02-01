@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class MainTic {
     public static void main(String[] args) {
         System.out.print("\n");
         TicTacToe game = new TicTacToe();
