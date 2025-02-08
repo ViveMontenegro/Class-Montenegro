@@ -17,21 +17,23 @@ public class Grades
         Scanner scan = new Scanner(System.in);
         double put = 0;
         int k = 0;
+        int index = 0;
         boolean first = true;
         System.out.print("Enter your grades. When finished type 10k or a negative number:    ");
         while (k < 10000 && k >= 0)
         {
             if (!first)
-                System.out.print("next:    ");
-            if (k < 10000 && k >= 0)
             {
-                put = scan.nextDouble();
-                Double input = Double.valueOf(put);
-                grades.add(input);
-                k = (int) put;
-                first = false;
+                System.out.print("next:    ");
+                index++;
             }
+            put = scan.nextDouble();
+            Double input = Double.valueOf(put);
+            grades.add(input);
+            k = (int) put;
+            first = false;
         }
+        grades.remove(index);
         scan.close();
     }
 
@@ -39,9 +41,9 @@ public class Grades
     {
         double sum = 0;
         int grade = 0;
-        for (int x = 0;x < grades.size() - 1;x++)
+        for (Double x: grades)
         {
-            sum += (grades.get(x)).doubleValue();
+            sum += x.doubleValue();
             grade++;
         }
         double output = (sum / grade);
