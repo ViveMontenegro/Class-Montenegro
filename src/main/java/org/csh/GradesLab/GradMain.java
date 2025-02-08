@@ -1,6 +1,6 @@
 package org.csh;
 
-public class Main {
+public class GradMain {
     public static void main(String[] args) {
         System.out.print("\n\n");
         Grades mulada = new Grades();
